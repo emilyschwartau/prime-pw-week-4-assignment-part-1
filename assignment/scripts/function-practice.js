@@ -102,18 +102,41 @@ console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
-  let sum = 0
+let array2 = [5, 6, 7];
+function sumAll( array2 ) {
+  let sum = 0;
+  for (i=0; i<array2.length; i++) {
+    sum = sum + array2[ i ];
+  }//end for
   // TODO: loop to add items
   return sum;
-}
+}//end sumAll
+console.log('Test - should say "18"', sumAll( array2 ));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+let inputarray = [1, -2, 3, -4, 5];
+let outputarray = [];
+function positiveArray( inputarray ) {
+  for (i=0; i<array.length; i++) {
+      if (inputarray[i] > 0) {
+        outputarray.push(inputarray[i]);
+      }//end if
+  }//end for
+  return outputarray;
+}//end positiveArray
+console.log('Test - should say "[1, 3, 5]"', positiveArray( inputarray ));
 
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+//write a function that converts hours to seconds
+function hoursToSeconds( hours ) {
+seconds = ( hours * 3600)
+return seconds;
+}//end hoursToSeconds
+console.log('Test - should say "10800"', hoursToSeconds(3));
